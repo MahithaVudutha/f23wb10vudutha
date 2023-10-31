@@ -11,8 +11,8 @@ block content
         p Number of rows should be less than 4
     else if cols > 5
         p Number of columns should be less than 5
-    else
-        table#outer
+        else
+            table#outer
             - for(let i=0; i<query.rows; i++) {
                 tr#middle
                     - for(let j=0; j<query.cols; j++) {
