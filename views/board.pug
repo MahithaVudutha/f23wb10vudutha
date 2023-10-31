@@ -14,8 +14,8 @@ block content
     else
         table#outer
             - for(let i=0; i<query.rows; i++) {
-                    tr#middle
-                        - for(let j=0; j<query.cols; j++) {
-                            td= 1+i+(j*rows)
-                        -}
+                tr#middle
+                    - for(let j=0; j<query.cols; j++) {
+                        td= 1+i+(j*rows)
+                    -}
             -}
