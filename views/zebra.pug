@@ -9,6 +9,14 @@ block content
                 div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.zebra_breed}
                 div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.zebra_price}
                 hr
+    br
+    h5= 'buy'
+
+    div(class="container-fluid")
+      each zebra,index in results
+        div(class="row", onclick=`buy(${index})`)
+          div(class="col-sm-2") <br>zebra #{index}: #{zebra.zebra_color} breed:#{zebra.zebra_breed} price:#{zebra.zebra_price}
+
     script.
         function buy(itemNo)
         {
